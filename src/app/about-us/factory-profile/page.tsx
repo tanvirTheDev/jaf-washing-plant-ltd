@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -144,7 +145,7 @@ const Page = () => {
           <p className="text-4xl text-primary_color mb-5 text-center md:text-left">
             Production Unit
           </p>
-          <ul className="space-y-3 text-lg pl-3 md:pl-0">
+          <ul className="space-y-3 text-lg pl-3 md:pl-0 mb-5">
             {productionData.map((item, index) => (
               <li key={index} className="flex items-center">
                 <span className="text-green-600 mr-2">
@@ -156,15 +157,11 @@ const Page = () => {
               </li>
             ))}
           </ul>
-          {/* download btn */}
-          <div className="mt-8 text-center md:text-left pb-10 md:pb-0">
-            <Link
-              href="https://almadinawashing.com/wp-content/uploads/2024/08/Factory-Profile-of-Al-madina-Washing-Plant.pdf"
-              className="px-6 py-3 bg-primary_color text-white rounded-lg font-semibold shadow-md hover:bg-[#0a2759] transition-all ease-in-out"
-            >
-              📄 Download company profile
-            </Link>
-          </div>
+          <Link href="/Company_Profile_JAF_Washing.pdf">
+            <Button className="bg-primary_color hover:bg-primary_color">
+              Download Factory Profile
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
